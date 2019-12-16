@@ -10,6 +10,11 @@ from src.spreadsheet import Sheet
 from src.triviaBackend import get_trivia
 
 import os
+import logging
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger()
 
 # state
 curState = 0
@@ -17,7 +22,7 @@ curState = 0
 questionSource = 1
 curQuestion = ""
 curAnswer = ""
-# curSheet = Sheet("flashcardData")
+curSheet = Sheet("flashcardData")
 
 stateDic = {"START": 0, "QUESTION": 1}
 
@@ -130,9 +135,8 @@ def handleAnswerButton(update, context):
         newText += "\nCorrent Answer = " + curAnswer
     newText += "\n/next - for next question"
 
-    query.edit_message_text(text=newText)
-    query.edit_message_reply_markup(reply_makrup=[])
-
+    query.edit_message_text(newText)
+    # query.edit_message_reply_markup(InlineKeyboardMarkup([[]]))
 
 
 def main():
@@ -169,9 +173,7 @@ def main():
 
 
 if __name__ == '__main__':
-    print("Starting austinFirstBot")
-    # main()
-    with open ('.\secrets\client_secret.json', "r") as f:
-        print("IN MAIN")
+    logger.info("Starting flashcardbot")
+    main()
 else:
     print("not starting")
