@@ -10,4 +10,4 @@ def get_trivia():
     triviaJson = requests.get(url, headers=headers).json().get('results')[0]
     triviaQuestion = triviaJson.get('question')
     triviaAnswer = triviaJson.get('correct_answer')
-    return [triviaQuestion, triviaAnswer]
+    return (triviaQuestion, triviaAnswer)
