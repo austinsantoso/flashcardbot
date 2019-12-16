@@ -134,7 +134,7 @@ def handleAnswerButton(update, context):
 
 def main():
     TOKEN = os.environ.get("telegram_bot_key")
-    print(TOKEN)
+
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
