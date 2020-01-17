@@ -1,0 +1,17 @@
+221585660
+{
+    'message_id': 285, 
+    'date': 1577240634, 
+    'chat': {'id': 682521999, 'type': 'private', 'username': 'aaustinn03', 'first_name': 'Austin', 'last_name': 'Santoso'}, 
+    'text': '/start', 
+    'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 
+    'caption_entities': [], 
+    'photo': [], 
+    'new_chat_members': [], 
+    'new_chat_photo': [], 
+    'delete_chat_photo': False, 
+    'group_chat_created': False, 
+    'supergroup_chat_created': False, 
+    'channel_chat_created': False, 
+    'from': {'id': 682521999, 'first_name': 'Austin', 'is_bot': False, 'last_name': 'Santoso', 'username': 'aaustinn03', 'language_code': 'en'}
+}
